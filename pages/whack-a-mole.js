@@ -30,12 +30,13 @@ export default function Mole(){
     const onClick = (e)=>{
         if(e.target.classList[1] == "mole"){
             console.log("got the mole");
-            e.target.style.cursor = "/hammer copy.png";
             console.dir(e.target);
         } else {
             console.log("none");
         }
     }
+    console.log(time);
+    console.log(rand);
     return (
         <main className="main">
             <p onClick={main}>start</p>
@@ -82,7 +83,7 @@ export default function Mole(){
                     flex-direction:column;
                     justify-content:center;
                     align-items:center;
-                    cursor:url(/hammer.png), help;
+                    cursor:url(/hammer.png) 30 30, help;
                 }
                 .hole-mole-set{
                     margin:30px
@@ -97,8 +98,11 @@ export default function Mole(){
                 p{
                     position:reletive;
                 }
-                .mole {
-                    transition: ease-in-out 2s;
+                // .mole {
+                //     transition: ease-in-out 2s;
+                // }
+                .mole:active{
+                    cursor:url("/hammer copy.png") 30 30,help;
                 }
           `}</style>
         </main>
